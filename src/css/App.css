@@ -1,0 +1,21 @@
+
+.info__status{
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    border: 1px solid;
+    width: 80px;
+    height: 17px;
+    align-items: center;
+    padding: .5rem;
+}
+
+.status{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+input{
+    width: 200px;
+}

@@ -1,5 +1,6 @@
 import Header from "./img/background header.png"
 import Location from "./components/Location"
+import "./css/App.css"
 
 function App() {
   return (
