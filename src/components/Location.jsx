@@ -7,6 +7,7 @@ const Location = () => {
     const [location, setLocation] = useState({})
 
     useEffect(() => {
+
         Axios.get(`https://rickandmortyapi.com/api/location/${Math.floor(Math.random(1) * 126) + 1}`)
             .then(res => setLocation(res.data))
     }, [])
@@ -15,9 +16,21 @@ const Location = () => {
     const lookId = () => {
 
         if (look <= 126) {
+
+            const container_loader = document.querySelector('.container_loader')
+            container_loader.style.opacity = 1
+            container_loader.style.visibility = 'visible'
+
             Axios.get(`https://rickandmortyapi.com/api/location/${look}`)
                 .then(res => setLocation(res.data))
             setLook("")
+
+            setTimeout(() => {                
+                const container_loader2 = document.querySelector('.container_loader')
+                container_loader2.style.opacity = 0
+                container_loader2.style.visibility = 'hidden'
+            }, 500);
+
         } else {
             alert("Entrada no valida")
             setLook("")
