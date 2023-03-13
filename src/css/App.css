@@ -205,9 +205,40 @@ body {
     );
 }
 
+.loader_url::before,
+.loader_url::after{
+    content: '';
+    position:absolute ;
+    border-radius: inherit;
+}
+
+.loader_url::before{
+    width: 100%;
+    height: 100%;
+    /* background-image: linear-gradient(0deg,#f0c 0%,#80f 100%); */
+}
+
+.loader_url::after{
+    width: 85%;
+    height: 85%;
+    background-color: #222;
+    top: 7.5%;
+    left: 7.5%;
+}
+.loader_url{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* border: 3px solid white; */
+    border-top-color: transparent;
+    animation: spin 1.2s linear infinite;
+    /* background: lightseagreen; */
+    background-image: linear-gradient(0deg,#8eff8b 0%, blue 100%);
+
+}
 .container_loader {
     /* background-color: #f3f3f3; */
-    background: radial-gradient(circle at center, #D5F3FF 0, #51B4E8 100%);
+    background: radial-gradient(circle at center, #D5F3FF 0, #8eff8b 100%);
     /* opacity: 0.65; */
     position: fixed;
     width: 100%;

@@ -58,7 +58,9 @@ const Location = () => {
                         <p> <strong> Residents: </strong> <br /><br /> {location.residents?.length}</p>
                     </div>
                 </div>
-            </div><br />
+            </div>
+            <div className="loader_url"></div>
+            <br />
             <div>
 
                 {/* { location.residents?.map( resid => ( */}
