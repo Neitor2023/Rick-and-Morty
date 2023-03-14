@@ -6,9 +6,8 @@ import Pages from './Pages';
 const Location = () => {
     const [location, setLocation] = useState({})
 
-    useEffect(() => {
-
-        Axios.get(`https://rickandmortyapi.com/api/location/${Math.floor(Math.random(1) * 126) + 1}`)
+    useEffect(async () => {
+        await Axios.get(`https://rickandmortyapi.com/api/location/${Math.floor(Math.random(1) * 126) + 1}`)
             .then(res => setLocation(res.data))
     }, [])
 
