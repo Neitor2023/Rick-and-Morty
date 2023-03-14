@@ -11,13 +11,14 @@ const Location = () => {
         Axios.get(`https://rickandmortyapi.com/api/location/${Math.floor(Math.random(1) * 126) + 1}`)
             .then(res => setLocation(res.data))
     }, [])
+
     const [look, setLook] = useState("")
 
     const lookId = () => {
 
         if (look <= 126) {
 
-            const container_loader = document.querySelector('.container_loader')
+            let container_loader = document.querySelector('.loader_url')
             container_loader.style.opacity = 1
             container_loader.style.visibility = 'visible'
 
@@ -25,12 +26,11 @@ const Location = () => {
                 .then(res => setLocation(res.data))
             setLook("")
 
-            setTimeout(() => {                
-                const container_loader2 = document.querySelector('.container_loader')
-                container_loader2.style.opacity = 0
-                container_loader2.style.visibility = 'hidden'
-            }, 500);
-
+            setTimeout(() => {
+                let container_loader = document.querySelector('.loader_url')
+                container_loader.style.opacity = 0
+                container_loader.style.visibility = 'hidden'
+            }, 2500);
         } else {
             alert("Entrada no valida")
             setLook("")
@@ -59,8 +59,20 @@ const Location = () => {
                     </div>
                 </div>
             </div>
-            <div className="loader_url"></div>
             <br />
+            <div className="loader_ul">
+                <div className="loader_url"></div>
+            </div>
+            <div className="grid_Master">
+                <div className="grid_Peon">
+                    <div className="elem_1"></div>
+                    <div className="elem_2"></div>
+                    <div className="elem_3"></div>
+                    <div className="elem_4"></div>
+                    <div className="elem_5"></div>
+                    <div className="elem_6"></div>
+                </div>
+            </div>
             <div>
 
                 {/* { location.residents?.map( resid => ( */}

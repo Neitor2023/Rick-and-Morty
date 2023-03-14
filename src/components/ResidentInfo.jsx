@@ -1,14 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import Axios from 'axios'
+// import LoaderStart from './LoaderStart';
+// import LoaderEnd from './LoaderEnd';
+
 
 const ResidentInfo = ({ url }) => {
 
     const [residen, setResiden] = useState({})
 
     useEffect(() => {
-
+        
+        const container_load = document.querySelector('.loader_url')
+        container_load.style.opacity = 1
+        container_load.style.visibility = 'visible'
+        
+        // <LoaderStart/>
+        
+        
         Axios.get(url)
-            .then(res => setResiden(res.data))
+        .then(res => setResiden(res.data))
+        
+        setTimeout(() => {
+            const container_load2 = document.querySelector('.loader_url')
+            container_load2.style.opacity = 0
+            container_load2.style.visibility = 'hidden'
+        }, 1000);
+            
+            // <LoaderEnd/>
     }, [url])
 
     const ColorStaus = () => {

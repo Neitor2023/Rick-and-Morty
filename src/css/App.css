@@ -35,14 +35,43 @@ body {
     background-color: #101010;
     font-family: Helvetica;
 }
+.grid_Master{
+    grid-template-rows: repeat( 
+        auto-fit,minmax(
+            200px, 1fr)
+    );
+    gap: 1rem
+}
 
+.grid_Peon{
+
+}
+.elem_1{
+    
+}
 .wrapper{
     display: flex;
-    width: 100vw;
-    padding: 10%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    /* gap: 300px; */
+    border: #E5f2ff;
+    /* position: absolute; */
+    /* width: 90%; */
+    /* height: 400px; */
+    padding: 7%;
+    /* display: grid; */
+    /* 
+    */
+    grid-template-rows: repeat( 
+        auto-fit,minmax(
+            200px, 1fr)
+    );
+    /* grid-template-rows: auto auto; */
+    /* gap: 1rem; */
+    /* flex-direction: row; */
+    /* background-color: lightcoral; */
     /* /* margin: 0 auto;
     height: 400px;
-    background-color: #161616;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -51,10 +80,10 @@ body {
 
 @media screen and (max-width: 767px){
     .wrapper{
-        height: 700px;
+        /* height: 700px; */
     }
 }
-.content{
+.contentxxx{
     max-width: 1024px;
     width: 100%;
     padding: 0.4%;
@@ -67,18 +96,22 @@ body {
     
 @media screen and (max-width: 767px){
     .content{
-        padding-top: 300px;
-        flex-direction: column;
+        /* padding-top: 300px; */
+        /* flex-direction: row; */
     }
 }
 
 .card{
-    align-items: center;
+    flex-basis: 100px;
+    flex-grow: 1;
+    /* position: relative; */
+    /* align-items: center;
     justify-content: center;
-    text-align: center;
-    width: 100%;
+    text-align: center; */
+    /* width: 100%; */
     max-width: 500px;
     min-width: 200px;
+    min-height: 180px;
     background-image: url("/src/img/page.png");
     /* background: #fff; */
     margin: auto;
@@ -102,7 +135,7 @@ body {
 
 @media screen and (max-width: 786px) {
     .card{
-        margin: 100px 20px auto 20px;
+        /* margin: 100px 20px auto 20px; */
     }
 }
 
@@ -215,7 +248,6 @@ body {
 .loader_url::before{
     width: 100%;
     height: 100%;
-    /* background-image: linear-gradient(0deg,#f0c 0%,#80f 100%); */
 }
 
 .loader_url::after{
@@ -225,16 +257,21 @@ body {
     top: 7.5%;
     left: 7.5%;
 }
+.loader_ul{
+    justify-content: center;
+    display: flex;
+}
 .loader_url{
+    visibility: 'hidden';
+    opacity: 0;
     width: 100px;
     height: 100px;
+    /* background: lightseagreen; */
     border-radius: 50%;
     /* border: 3px solid white; */
     border-top-color: transparent;
     animation: spin 1.2s linear infinite;
-    /* background: lightseagreen; */
     background-image: linear-gradient(0deg,#8eff8b 0%, blue 100%);
-
 }
 .container_loader {
     /* background-color: #f3f3f3; */
