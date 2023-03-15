@@ -5,6 +5,12 @@ const ResidentInfo = ({ url }) => {
     const [residen, setResiden] = useState({})
 
     useEffect(() => {
+
+        // let container_loader = document.querySelector('.loader_url')
+        // container_loader.style.opacity = 1
+        // container_loader.style.height = '100px'
+        // container_loader.style.visibility = 'visible'
+
         Axios.get(url)
             .then(res => setResiden(res.data))
 

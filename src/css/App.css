@@ -167,8 +167,9 @@ body {
     width: 215px;
     height: 60px;
     background: rgb(142, 255, 139,0.5);
-    border-top-right-radius: 4rem;
-    border-bottom-right-radius: 4rem;    
+    /* border-top-right-radius: 4rem; */
+    /* border-bottom-right-radius: 4rem; */
+    border-radius: 4rem;
 }
 
 .btn_rick:hover{
@@ -215,11 +216,6 @@ body {
     background-image: linear-gradient(0deg,#8eff8b 0%, blue 100%);
 }
 
-.box_btn{
-    width: 100%;
-    height: 35px;
-}
-
 .btn_page{
     font-family: 'Fira code';
     color: #000;
@@ -230,6 +226,9 @@ body {
     background: rgb(142, 255, 139,0.5);
 }
 
+.Select{
+    z-index: 999;
+}
 .wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -271,6 +270,7 @@ body {
     min-width: 200px;
     min-height: 180px;
     background-image: url("/src/img/page.png");
+    background-size: 700PX;
     /* background: #fff; */
     margin: auto;
     border-radius: 15px;
@@ -305,7 +305,7 @@ body {
     height: 22px;
     align-items: center;
     padding: .5rem;
-    z-index: 9999;
+    z-index: 1;
 }
 
 .status{
