@@ -4,7 +4,7 @@ import ResidentInfo from './ResidentInfo'
 import Pages from './Pages';
 import Pagination from './Pagination';
 
-const Location2 = () => {
+const var2 = () => {
     const [location, setLocation] = useState({})
 
     useEffect(() => {
@@ -86,4 +86,4 @@ const Location2 = () => {
     );
 };
 
-export default Location2;
+export default var2;
