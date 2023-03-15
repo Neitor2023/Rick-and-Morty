@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
+// import App from './App'
+import Style from '/style'
 // import Loader from './components/loader'
 
 window.addEventListener('load', () => {
